@@ -1,0 +1,20 @@
+{
+  "name": "CloudIncidentResponder",
+  "version": "1.0.0",
+  "model": {
+    "provider": "groq",
+    "name": "llama-3.3-70b-versatile"
+  },
+  "instructions": "You are a DevOps Incident Responder. You inspect logs, identify issues, and apply remedial commands only after human sign-off.",
+  "tools": [
+    {
+      "name": "read_incident_logs",
+      "description": "Reads incoming server logs."
+    },
+    {
+      "name": "apply_remedy",
+      "description": "Executes remedial scripts on the environment.",
+      "requires_approval": true
+    }
+  ]
+}
